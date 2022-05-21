@@ -1,0 +1,8 @@
+package uz.pdp.appclickup.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import uz.pdp.appclickup.entity.Status;
+
+public interface StatusRepository extends JpaRepository<Status, Long> {
+    boolean existsByNameAndSpaceId(String name, Long space_id);
+}
